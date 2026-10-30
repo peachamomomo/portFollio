@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="./industry.css">
+<script src="_ds/industry-ede87c06-bd1c-4000-a67b-d01afbee25f5/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Barlow","Zen Kaku Gothic New",sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:"Barlow Condensed","Zen Kaku Gothic New",sans-serif;margin:0}
+a{color:var(--color-accent-700)}
+a:hover{color:var(--color-accent-900)}
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:var(--color-bg);color:var(--color-text)">
+
+<header style="position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--color-bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--color-divider)">
+  <nav class="nav" style="max-width:1160px;margin:0 auto;padding:14px 24px;flex-wrap:wrap;gap:24px">
+    <a href="#top" class="nav-brand" style="font-family:'Barlow Condensed','Zen Kaku Gothic New',sans-serif;font-size:20px">Ai Morimoto</a>
+    <a href="#work">作品</a>
+    <a href="#strengths">強み</a>
+    <a href="#toolkit">スキル</a>
+    <a href="#profile">経歴</a>
+    <a href="#contact" class="btn btn-primary" style="color:var(--color-bg)">連絡する</a>
+  </nav>
+</header>
+
+<section id="top" style="max-width:1160px;margin:0 auto;padding:80px 24px 56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:56px;align-items:center">
+  <div style="display:flex;flex-direction:column;gap:22px">
+    <div style="font-size:13px;letter-spacing:.14em;color:var(--color-accent-700)">TOKYO, JAPAN · VR / GAME DEVELOPMENT</div>
+    <h1 style="font-size:clamp(48px,7vw,88px);line-height:1;letter-spacing:-.01em">森本 藍衣</h1>
+    <div style="font-family:'Barlow Condensed','Zen Kaku Gothic New',sans-serif;font-size:clamp(22px,2.6vw,30px);line-height:1.45;font-weight:600;text-wrap:pretty">口に入れて遊ぶ VR を、企画・システム設計・実装・展示までチームで形にしています。</div>
+    <p style="margin:0;font-size:16px;line-height:1.9;color:var(--color-neutral-800);max-width:560px;text-wrap:pretty">電気通信大学 情報理工学域 I類 メディア情報学プログラム、広田研究室所属。IVRC2026「MealBeBack」でシステム設計を担当し、その後 alt.ctrl.GDC 2027 出展作「Mitama: The Mouth of God」の Unity 開発とレベルデザインに取り組んでいます。</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:6px">
+      <a href="#work" class="btn btn-primary blueprint" style="color:var(--color-bg);text-decoration:none;padding:10px 18px;font-size:15px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>作品を見る ↓</a>
+      <a href="#contact" class="btn btn-secondary" style="text-decoration:none;padding:10px 18px;font-size:15px">連絡する</a>
+    </div>
+  </div>
+  <figure class="blueprint" style="margin:0;display:flex;flex-direction:column">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div style="position:relative;aspect-ratio:4/5;max-height:560px;width:100%">
+      <image-slot id="portrait" shape="rect" placeholder="ポートレート写真をドロップ"></image-slot>
+    </div>
+    <figcaption style="margin:0;padding:10px 14px;border-top:1px solid var(--color-divider);font-size:12px">写真のキャプション（撮影場所・年）</figcaption>
+  </figure>
+</section>
+
+<section style="max-width:1160px;margin:0 auto;padding:0 24px 80px">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:24px">
+    <div class="blueprint" style="padding:22px;display:flex;flex-direction:column;gap:8px">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="font-size:11px;letter-spacing:.14em;color:var(--color-neutral-600)">EXHIBITION</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:600;line-height:1.1">alt.ctrl.GDC 2027</div>
+      <div style="font-size:14px;line-height:1.7;color:var(--color-neutral-800)">Mitama: The Mouth of God を制作中。Unity エンジニア、レベルデザイン担当。</div>
+    </div>
+    <div class="blueprint" style="padding:22px;display:flex;flex-direction:column;gap:8px">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="font-size:11px;letter-spacing:.14em;color:var(--color-neutral-600)">CONTEST</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:600;line-height:1.1">IVRC 2026</div>
+      <div style="font-size:14px;line-height:1.7;color:var(--color-neutral-800)">MealBeBack でデバイス通信まわりのシステム設計を担当。</div>
+    </div>
+    <div class="blueprint" style="padding:22px;display:flex;flex-direction:column;gap:8px">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="font-size:11px;letter-spacing:.14em;color:var(--color-neutral-600)">LOOKING FOR</div>
+      <div style="font-family:'Barlow Condensed','Zen Kaku Gothic New',sans-serif;font-size:32px;font-weight:600;line-height:1.1">就職・インターン</div>
+      <div style="font-size:14px;line-height:1.7;color:var(--color-neutral-800)">ゲーム・VR 業界、IT 業界でのポジションを探しています。</div>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="border-top:1px solid var(--color-divider)">
+  <div style="max-width:1160px;margin:0 auto;padding:72px 24px 88px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <h2 style="font-size:44px">作品</h2>
+      <div style="font-size:13px;color:var(--color-neutral-700)">{{ worksMeta }}</div>
+    </div>
+    <p style="margin:0 0 32px;font-size:15px;color:var(--color-neutral-700)">何をつくり、そのなかで何を担当したか。{{ orderLabel }}に並べています。</p>
+
+    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:48px">
+      <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+        <div style="width:72px;font-size:11px;letter-spacing:.12em;color:var(--color-neutral-600)">種別</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <sc-for list="{{ kindFilters }}" as="f" hint-placeholder-count="4">
+            <button onClick="{{ f.onClick }}" class="{{ f.cls }}">{{ f.label }}</button>
+          </sc-for>
+        </div>
+      </div>
+      <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+        <div style="width:72px;font-size:11px;letter-spacing:.12em;color:var(--color-neutral-600)">使用技術</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <sc-for list="{{ techFilters }}" as="f" hint-placeholder-count="5">
+            <button onClick="{{ f.onClick }}" class="{{ f.cls }}">{{ f.label }}</button>
+          </sc-for>
+        </div>
+      </div>
+      <sc-if value="{{ hasStrength }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+          <div style="width:72px;font-size:11px;letter-spacing:.12em;color:var(--color-neutral-600)">強み</div>
+          <button onClick="{{ clearStrength }}" class="btn btn-primary">{{ strengthName }} ×</button>
+        </div>
+      </sc-if>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:56px">
+      <sc-for list="{{ works }}" as="w" hint-placeholder-count="4">
+        <article style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:36px;align-items:start">
+          <figure class="blueprint" style="margin:0">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="position:relative;aspect-ratio:16/9;width:100%">
+              <sc-if value="{{ w.hasImage }}" hint-placeholder-val="{{ false }}">
+                <div class="duotone" style="position:absolute;inset:0;background-image:{{ w.bgImage }};background-size:cover;background-position:center"></div>
+              </sc-if>
+              <sc-if value="{{ w.noImage }}" hint-placeholder-val="{{ true }}">
+                <image-slot id="{{ w.slotId }}" shape="rect" placeholder="作品画像をドロップ"></image-slot>
+              </sc-if>
+            </div>
+          </figure>
+          <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+            <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;letter-spacing:.08em">
+              <span style="color:var(--color-accent-700)">{{ w.no }} · {{ w.kind }} · {{ w.event }}</span>
+              <span style="color:var(--color-neutral-700)">{{ w.period }}</span>
+            </div>
+            <h3 style="font-size:34px;line-height:1.1;text-wrap:pretty">{{ w.title }}</h3>
+            <div style="font-size:17px;font-weight:500;color:var(--color-neutral-900)">{{ w.tagline }}</div>
+            <sc-if value="{{ w.hasNote }}" hint-placeholder-val="{{ false }}">
+              <div style="font-size:13px;color:var(--color-accent-700)">{{ w.note }}</div>
+            </sc-if>
+            <p style="margin:0;font-size:14px;line-height:1.9;color:var(--color-neutral-800);text-wrap:pretty">{{ w.summary }}</p>
+            <div style="display:grid;grid-template-columns:56px 1fr;gap:12px;padding-top:14px;border-top:1px solid var(--color-divider)">
+              <div style="font-size:11px;letter-spacing:.12em;color:var(--color-neutral-600);padding-top:3px">担当</div>
+              <ul style="margin:0;padding-left:18px;font-size:14px;line-height:1.8">
+                <sc-for list="{{ w.role }}" as="r" hint-placeholder-count="2"><li>{{ r }}</li></sc-for>
+              </ul>
+            </div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap">
+              <sc-for list="{{ w.strengthTags }}" as="t" hint-placeholder-count="2">
+                <span class="{{ t.cls }}">{{ t.name }}</span>
+              </sc-for>
+              <sc-for list="{{ w.tech }}" as="t" hint-placeholder-count="2">
+                <span class="tag tag-neutral">{{ t }}</span>
+              </sc-for>
+            </div>
+            <sc-if value="{{ w.hasLinks }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;gap:8px;flex-wrap:wrap;padding-top:4px">
+                <sc-for list="{{ w.links }}" as="l" hint-placeholder-count="1">
+                  <a href="{{ l.url }}" target="_blank" rel="noopener" class="btn btn-secondary" style="text-decoration:none">{{ l.label }} ↗</a>
+                </sc-for>
+              </div>
+            </sc-if>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+    <sc-if value="{{ isEmpty }}" hint-placeholder-val="{{ false }}">
+      <div style="padding:48px 0;font-size:14px;color:var(--color-neutral-700)">条件に合う作品はありません。</div>
+    </sc-if>
+  </div>
+</section>
+
+<section id="strengths" style="border-top:1px solid var(--color-divider)">
+  <div style="max-width:1160px;margin:0 auto;padding:72px 24px 88px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:36px">
+      <h2 style="font-size:44px">4つの強み</h2>
+      <div style="font-size:13px;color:var(--color-neutral-700)">選ぶと、その強みを発揮した作品に絞り込みます</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px">
+      <sc-for list="{{ strengths }}" as="s" hint-placeholder-count="4">
+        <button onClick="{{ s.onClick }}" class="blueprint" style="all:unset;position:relative;box-sizing:border-box;border:1px solid {{ s.border }};background:{{ s.bg }};cursor:pointer;padding:24px;display:flex;flex-direction:column;gap:12px;min-height:230px;transition:background .2s">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="display:flex;justify-content:space-between;font-size:11px;letter-spacing:.12em;color:var(--color-accent-700)">
+            <span>{{ s.code }}</span><span>{{ s.count }} WORKS →</span>
+          </div>
+          <div style="font-family:'Barlow Condensed','Zen Kaku Gothic New',sans-serif;font-size:26px;font-weight:600">{{ s.name }}</div>
+          <div style="font-size:14px;line-height:1.85;color:var(--color-neutral-800);text-wrap:pretty">{{ s.desc }}</div>
+        </button>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="toolkit" style="border-top:1px solid var(--color-divider)">
+  <div style="max-width:1160px;margin:0 auto;padding:72px 24px 88px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:40px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <h2 style="font-size:44px">スキル</h2>
+      <p style="margin:0;font-size:15px;line-height:1.9;color:var(--color-neutral-700)">Unity メインで、C言語やC#, Ruby, Java, html/JavaScriptを扱えます。C++鋭意勉強中......</p>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div style="display:grid;grid-template-columns:minmax(0,140px) 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--color-divider)">
+        <div style="font-size:12px;letter-spacing:.1em;color:var(--color-neutral-600)">PROGRAMMING</div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-accent">C#</span><span class="tag tag-accent">C</span><span class="tag tag-accent">Java</span><span class="tag tag-accent">Ruby</span><span class="tag tag-accent">HTML / JavaScript</span><span class="tag tag-outline" style="white-space:nowrap">C++（学習中）</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(0,140px) 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--color-divider)">
+        <div style="font-size:12px;letter-spacing:.1em;color:var(--color-neutral-600)">ENGINE & XR</div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-accent">Unity</span><span class="tag tag-accent">Meta Quest</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(0,140px) 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider)">
+        <div style="font-size:12px;letter-spacing:.1em;color:var(--color-neutral-600)">HARDWARE</div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-accent">Arduino</span><span class="tag tag-accent">シリアル通信</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="profile" style="border-top:1px solid var(--color-divider)">
+  <div style="max-width:1160px;margin:0 auto;padding:72px 24px 88px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:40px">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <h2 style="font-size:44px">経歴・人となり</h2>
+      <div style="display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.95;color:var(--color-neutral-800)">
+        <p style="margin:0">森本藍衣と申します。<br>ゲーム業界に飛び込むため、日々邁進しております。</p>
+        <p style="margin:0">よく慎重派と称されます。疑り深いことが玉に瑕。</p>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:40px">
+      <div style="display:flex;flex-direction:column">
+        <div style="font-size:12px;letter-spacing:.12em;color:var(--color-neutral-600);margin-bottom:8px">EDUCATION</div>
+        <div style="display:grid;grid-template-columns:minmax(0,120px) 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--color-divider)">
+          <div style="font-size:13px;color:var(--color-neutral-700)">2023.04 – 現在</div>
+          <div style="display:flex;flex-direction:column;gap:2px"><div style="font-weight:500">電気通信大学</div><div style="font-size:13px;color:var(--color-neutral-700)">情報理工学域 I類（情報系）メディア情報学プログラム 広田研究室</div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,120px) 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider)">
+          <div style="font-size:13px;color:var(--color-neutral-700)">2023.03</div>
+          <div style="font-weight:500">大妻中野高等学校 卒業</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <div style="font-size:12px;letter-spacing:.12em;color:var(--color-neutral-600);margin-bottom:8px">OFF THE CLOCK</div>
+        <div style="padding:16px 0;border-top:1px solid var(--color-divider);font-size:14px">毎クールアニメを追っています。</div>
+        <div style="display:grid;grid-template-columns:minmax(0,120px) 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--color-divider);font-size:14px;line-height:1.7">
+          <div style="color:var(--color-neutral-700)">好きなジャンル</div><div>RPG, アドベンチャー, 重厚なストーリーを持つもの</div>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,120px) 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--color-divider);font-size:14px;line-height:1.7">
+          <div style="color:var(--color-neutral-700)">好きなゲーム</div><div>Tales of Symphonia, 二ノ国, ダンガンロンパ, Fate/GrandOrder</div>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,120px) 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);font-size:14px;line-height:1.7">
+          <div style="color:var(--color-neutral-700)">好きなアニメ</div><div>銀魂、僕のヒーローアカデミア、イナズマイレブンシリーズ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--color-accent-900);color:var(--color-bg)">
+  <div style="max-width:1160px;margin:0 auto;padding:88px 24px 72px;display:flex;flex-direction:column;gap:24px">
+    <h2 style="font-size:clamp(40px,6vw,72px);line-height:1.05">ご連絡をお待ちしています。</h2>
+    <p style="margin:0;font-size:16px;line-height:1.9;max-width:620px;color:var(--color-accent-200)">ゲーム・VR 業界、IT 業界への就職、インターンシップの機会を探しています。作品の詳細やデモについても、お気軽にお問い合わせください。</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+      <a href="mailto:morimotoai2004@gmail.com" class="btn" style="background:var(--color-bg);color:var(--color-accent-900);border-color:var(--color-bg);text-decoration:none;padding:12px 20px;font-size:16px">morimotoai2004@gmail.com</a>
+      <button onClick="{{ copyMail }}" class="btn" style="color:var(--color-bg);border-color:var(--color-accent-600);padding:12px 20px;font-size:16px">{{ copyLabel }}</button>
+    </div>
+  </div>
+  <div style="max-width:1160px;margin:0 auto;padding:24px;border-top:1px solid var(--color-accent-800);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--color-accent-300)">
+    <span>© 2026 Ai Morimoto · Tokyo</span>
+    <a href="#top" style="color:var(--color-accent-300)">ページ上部へ ↑</a>
+  </div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;order&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;oldest&quot;,&quot;newest&quot;],&quot;default&quot;:&quot;oldest&quot;,&quot;tsType&quot;:&quot;'oldest'|'newest'&quot;}}">
+// ===== 作品を追加するときは WORKS に1件追記するだけ（date の順に自動で並びます）=====
+// kind: '授業' | 'サークル' | 'コンテスト'（新しい種別も自動でフィルタに出ます）
+// strengths: 'se' | 'plan' | 'prog' | 'comm'
+// image: 画像URL。空欄なら画面上に画像をドラッグ＆ドロップできます
+// links: [{ label, url }]
+const WORKS = [
+  { id: 'mediamonster', date: '2024-12-01', period: '2024.12 – 2025.02', kind: '授業', event: 'Class',
+    title: 'MediaMonster', tagline: 'IP とポートを指定して対戦する、通信コマンドバトル',
+    summary: 'IPアドレスとポート番号指定による通信コマンドバトルゲーム',
+    role: ['通信処理の実装'],
+    strengths: ['prog'], tech: ['Java'], image: '', links: [] },
+  { id: 'madeinuec', date: '2026-02-13', period: '2026.02.13 – 02.28', kind: 'サークル', event: 'Circle',
+    title: 'Made in UEC', tagline: '数秒勝負のミニゲームが次々に続く',
+    summary: 'ごくわずかな制限時間でプレイするミニゲームが集合した、ハイスピードアクションゲーム。',
+    role: ['ミニゲームの一つである「ウィンドウ」を企画、グループを結成して実装まで行った。'],
+    strengths: ['plan', 'prog', 'comm'], tech: ['Unity', 'C#'], image: '', links: [] },
+  { id: 'mealbeback', date: '2026-06-06', period: '2026.06.06 – 09.07', kind: 'コンテスト', event: 'IVRC 2026 · Team Eaterminator',
+    title: 'MealBeBack', tagline: '咀嚼を、逆再生する食育体験',
+    summary: '『日本書紀』の保食神(うけもちのかみ)は，口から飯や魚，獣を生み出して人をもてなしたと語られる．本企画では「口から食が生まれる」情景と，咀嚼の逆再生表現を重ね合わせ、食の背後にある生命に身体を通して触れる新たな食育体験を構築する．咀嚼に応じて口内の食べ物が物理的に復元・増加し，その原材料へと巻き戻り，体験者の口から生み出される. クイズ形式の体験として実装することで楽しめる食育コンテンツを目指す.',
+    role: ['システム設計（主にデバイスとの通信処理とデバイス選択処理）', 'ハード設計のフォロー', '予稿添削', '会場展示設営', '安全設計が核のプロジェクトだったため、企画段階から問題提起を念入りに'],
+    strengths: ['se', 'plan', 'prog', 'comm'], tech: ['Unity', 'C#', 'Arduino', 'シリアル通信'],
+    image: 'https://img.youtube.com/vi/YFNzpdmrfdw/maxresdefault.jpg',
+    links: [{ label: 'YouTube', url: 'https://www.youtube.com/watch?v=YFNzpdmrfdw' }] },
+  { id: 'mitama', date: '2026-10-18', period: '2026.10.18 –', kind: 'コンテスト', event: 'alt.ctrl.GDC 2027 · MikoMiko★EatFever',
+    title: 'Mitama: The Mouth of God', tagline: '食感だけを手がかりに遊ぶ VR ゲーム', note: 'IVRC2026「MealBeBack」の後に制作',
+    summary: 'フォーク型の触覚コントローラを口に入れ、空気制御で生まれる食感から食べ物や生き物を生み出す。プレイヤーは村の神となり、首を振ってそれを村人に届ける。120秒のタイムアタック形式。',
+    role: ['Unity エンジニア（バグ修正、海エリア）', '山エリアのデザインとオブジェクト配置', 'step 遷移ごとのエリア状態の決定', '全エリアの統合、デザイン調整', 'レベルデザイン調整（全体）'],
+    strengths: ['se', 'plan', 'prog', 'comm'], tech: ['Unity', 'C#', 'Arduino', 'シリアル通信'],
+    image: 'https://gdc.mikomiko-night.workers.dev/assets/world/village.jpg',
+    links: [{ label: 'プロジェクトサイト', url: 'https://gdc.mikomiko-night.workers.dev' }, { label: '制作の裏側', url: 'https://gdc.mikomiko-night.workers.dev/making.html' }] },
+];
+
+const STRENGTHS = [
+  { id: 'se', code: '01 · SE', name: 'システム設計', desc: 'MealBeBack でデバイスとの通信処理・デバイス選択処理を設計。安全設計を前提に、企画段階から問題を洗い出しました。' },
+  { id: 'plan', code: '02 · PLANNER', name: '企画', desc: 'Made in UEC のミニゲーム「ウィンドウ」を企画。Mitama では step 遷移ごとのエリア状態を決めました。' },
+  { id: 'prog', code: '03 · PROGRAMMING', name: 'プログラミング', desc: 'Unity / C# を中心に、Java による通信処理、Arduino とのシリアル通信まで実装しています。' },
+  { id: 'comm', code: '04 · COMMUNICATION', name: 'コミュニケーション', desc: 'グループを結成して実装まで進行。予稿添削、展示設営、全エリアの統合など、チームをつなぐ役割を担いました。' },
+];
+
+class Component extends DCLogic {
+  state = { kind: 'all', tech: 'all', strength: null, copied: false };
+
+  renderVals() {
+    const order = this.props.order ?? 'oldest';
+    const { kind, tech, strength } = this.state;
+    const sName = id => STRENGTHS.find(s => s.id === id)?.name;
+
+    const chrono = [...WORKS].sort((a, b) => a.date.localeCompare(b.date));
+    const numbered = chrono.map((w, i) => ({ ...w, no: String(i + 1).padStart(2, '0') }));
+    const sorted = order === 'newest' ? numbered.reverse() : numbered;
+    const match = w => (kind === 'all' || w.kind === kind) && (tech === 'all' || w.tech.includes(tech)) && (!strength || w.strengths.includes(strength));
+
+    const works = sorted.filter(match).map(w => ({
+      ...w,
+      slotId: 'work-' + w.id,
+      hasNote: !!w.note, hasLinks: w.links.length > 0,
+      hasImage: !!w.image, noImage: !w.image, bgImage: w.image ? `url("${w.image}")` : 'none',
+      strengthTags: w.strengths.map(t => ({ name: sName(t), cls: t === strength ? 'tag tag-outline' : 'tag tag-accent' })),
+    }));
+
+    const mk = (list, cur, key) => [{ v: 'all', label: 'すべて' }, ...list.map(v => ({ v, label: v }))].map(o => ({
+      label: o.label, cls: o.v === cur ? 'btn btn-primary' : 'btn btn-secondary',
+      onClick: () => this.setState({ [key]: o.v }),
+    }));
+    const years = chrono.map(w => w.date.slice(0, 4));
+
+    const strengths = STRENGTHS.map(s => {
+      const on = strength === s.id;
+      return { ...s, count: WORKS.filter(w => w.strengths.includes(s.id)).length,
+        bg: on ? 'var(--color-accent-100)' : 'transparent',
+        border: on ? 'var(--color-accent)' : 'var(--color-divider)',
+        onClick: () => {
+          this.setState({ strength: on ? null : s.id });
+          const el = document.getElementById('work');
+          if (!on && el) window.scrollTo({ top: el.offsetTop - 56, behavior: 'smooth' });
+        } };
+    });
+
+    return {
+      works, strengths,
+      kindFilters: mk([...new Set(chrono.map(w => w.kind))], kind, 'kind'),
+      techFilters: mk([...new Set(chrono.flatMap(w => w.tech))], tech, 'tech'),
+      hasStrength: !!strength, strengthName: sName(strength),
+      clearStrength: () => this.setState({ strength: null }),
+      isEmpty: works.length === 0,
+      worksMeta: `${WORKS.length} 作品 · ${years[0]} – ${years[years.length - 1]}`,
+      orderLabel: order === 'newest' ? '新しい順' : '時系列順',
+      copyLabel: this.state.copied ? 'コピーしました' : 'アドレスをコピー',
+      copyMail: () => { navigator.clipboard?.writeText('morimotoai2004@gmail.com'); this.setState({ copied: true }); setTimeout(() => this.setState({ copied: false }), 1800); },
+    };
+  }
+}
+</script>
+</body>
+</html>

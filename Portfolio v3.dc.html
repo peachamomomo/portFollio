@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="./industry.css">
+<script src="_ds/industry-ede87c06-bd1c-4000-a67b-d01afbee25f5/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Barlow","Zen Kaku Gothic New",sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:"Barlow Condensed","Zen Kaku Gothic New",sans-serif;margin:0}
+.btn{white-space:nowrap;flex-shrink:0}
+a{color:var(--color-accent-700)}
+a:hover{color:var(--color-accent-900)}
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:var(--color-bg);color:var(--color-text)">
+
+<header style="position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--color-bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--color-divider)">
+  <nav class="nav" style="max-width:1200px;margin:0 auto;padding:14px 24px;flex-wrap:wrap;gap:24px">
+    <a href="#top" class="nav-brand" style="font-family:'Barlow Condensed','Zen Kaku Gothic New',sans-serif;font-size:20px">森本 藍衣</a>
+    <a href="#work">作品</a>
+    <a href="#profile">プロフィール</a>
+    <a href="#contact" class="btn btn-primary" style="color:var(--color-bg)">連絡する</a>
+  </nav>
+</header>
+
+<section id="top" style="max-width:1200px;margin:0 auto;padding:72px 24px 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:56px;align-items:center">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="font-size:13px;letter-spacing:.14em;color:var(--color-accent-700)">電気通信大学 · VR／ゲーム制作</div>
+    <h1 style="font-size:clamp(52px,7.4vw,96px);line-height:1;letter-spacing:-.01em">森本 藍衣</h1>
+    <div style="font-family:'Barlow Condensed','Zen Kaku Gothic New',sans-serif;font-size:clamp(28px,3.4vw,42px);line-height:1.3;font-weight:600;text-wrap:pretty">遊びを考え、仕組みをつくる。</div>
+    <p style="margin:0;font-size:16px;line-height:1.8;color:var(--color-neutral-800);max-width:520px;text-wrap:pretty">チームでのゲーム・VR 制作において、企画・設計・実装・展示の各工程に携わってきました。研究では、振動による触覚提示をハードウェアと Unity の両面から扱っています。</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
+      <a href="#work" class="btn btn-primary blueprint" style="color:var(--color-bg);text-decoration:none;padding:10px 18px;font-size:15px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>作品を見る ↓</a>
+      <a href="#contact" class="btn btn-secondary" style="text-decoration:none;padding:10px 18px;font-size:15px">連絡する</a>
+    </div>
+  </div>
+  <figure class="blueprint" style="margin:0">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div style="position:relative;aspect-ratio:4/5;max-height:540px;width:100%">
+      <image-slot id="portrait" shape="rect" placeholder="ポートレート写真をドロップ"></image-slot>
+    </div>
+  </figure>
+</section>
+
+<section style="max-width:1200px;margin:0 auto;padding:0 24px 72px">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px">
+    <div class="blueprint" style="padding:24px;display:flex;flex-direction:column;gap:12px">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="font-family:'Barlow Condensed','Zen Kaku Gothic New',sans-serif;font-size:22px;font-weight:600;color:var(--color-text)">大会参加</div>
+      
+      <div style="display:flex;flex-direction:column"><div style="display:grid;grid-template-columns:minmax(0,104px) 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--color-divider);font-size:13px;line-height:1.6"><span style="color:var(--color-accent-800);font-weight:600">IVRC 2026</span><span>MealBeBack：予稿審査・動画審査を通過し、会場で展示しました。</span></div><div style="display:grid;grid-template-columns:minmax(0,104px) 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--color-divider);font-size:13px;line-height:1.6"><span style="color:var(--color-accent-800);font-weight:600">alt.ctrl.GDC 2027</span><span>Mitama：応募書類を提出し、現在審査待ちです。</span></div></div>
+    </div>
+    <div class="blueprint" style="padding:24px;display:flex;flex-direction:column;gap:12px">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="font-family:'Barlow Condensed','Zen Kaku Gothic New',sans-serif;font-size:22px;font-weight:600;color:var(--color-text)">研究（広田研究室）</div>
+      <div style="font-size:16px;font-weight:500;line-height:1.5">VR における触覚提示の研究</div>
+      <div style="font-size:14px;line-height:1.75;color:var(--color-neutral-800)">振動刺激で足裏に摩擦感を提示する研究を通じて、次の技術と知見を身につけました。</div>
+      <div style="display:flex;flex-direction:column"><div style="display:grid;grid-template-columns:minmax(0,104px) 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--color-divider);font-size:13px;line-height:1.6"><span style="color:var(--color-accent-800);font-weight:600">ハードウェア</span><span>振動子を駆動する回路の設計・製作</span></div><div style="display:grid;grid-template-columns:minmax(0,104px) 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--color-divider);font-size:13px;line-height:1.6"><span style="color:var(--color-accent-800);font-weight:600">ソフトウェア</span><span>VR で動作する Unity アプリケーションの開発</span></div><div style="display:grid;grid-template-columns:minmax(0,104px) 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--color-divider);font-size:13px;line-height:1.6"><span style="color:var(--color-accent-800);font-weight:600">信号制御</span><span>回路と Unity をつなぐ信号制御の設計</span></div><div style="display:grid;grid-template-columns:minmax(0,104px) 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--color-divider);font-size:13px;line-height:1.6"><span style="color:var(--color-accent-800);font-weight:600">トラッキング</span><span>Vive Tracker を用いた位置計測</span></div><div style="display:grid;grid-template-columns:minmax(0,104px) 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--color-divider);font-size:13px;line-height:1.6"><span style="color:var(--color-accent-800);font-weight:600">知見</span><span>ハプティクスにおける仮現運動</span></div></div>
+    </div>
+    <div class="blueprint" style="padding:24px;display:flex;flex-direction:column;gap:12px">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="font-family:'Barlow Condensed','Zen Kaku Gothic New',sans-serif;font-size:22px;font-weight:600;color:var(--color-text)">志望職種</div>
+      
+      <div style="display:flex;gap:4px 20px;flex-wrap:wrap;font-family:'Barlow Condensed','Zen Kaku Gothic New',sans-serif;font-size:26px;font-weight:600;line-height:1.25;color:var(--color-accent-800)"><span style="white-space:nowrap">ゲームプランナー</span><span style="white-space:nowrap">プログラマー</span></div>
+      <div style="display:flex;flex-direction:column"><div style="display:grid;grid-template-columns:minmax(0,104px) 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--color-divider);font-size:13px;line-height:1.6"><span style="color:var(--color-accent-800);font-weight:600">卒業</span><span>2028年3月 卒業予定</span></div><div style="display:grid;grid-template-columns:minmax(0,104px) 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--color-divider);font-size:13px;line-height:1.6"><span style="color:var(--color-accent-800);font-weight:600">対象</span><span>ゲーム・VR 業界、IT 業界への就職、インターンシップを希望しています。</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="border-top:1px solid var(--color-divider)">
+  <div style="max-width:1200px;margin:0 auto;padding:72px 24px 88px;display:flex;flex-direction:column;gap:48px">
+    <h2 style="font-size:48px">作品</h2>
+
+    <sc-for list="{{ featured }}" as="w" hint-placeholder-count="1">
+      <article class="blueprint" style="display:flex;flex-direction:column">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr))">
+          <div style="position:relative;min-height:340px;background:var(--color-neutral-200)">
+            <sc-if value="{{ w.hasImage }}" hint-placeholder-val="{{ false }}">
+              <div role="img" aria-label="{{ w.title }}" style="position:absolute;inset:0;background-image:{{ w.bgImage }};background-size:cover;background-position:center"></div>
+            </sc-if>
+            <sc-if value="{{ w.noImage }}" hint-placeholder-val="{{ true }}">
+              <image-slot id="{{ w.slotId }}" shape="rect" placeholder="作品画像をドロップ"></image-slot>
+            </sc-if>
+            <div style="position:absolute;top:16px;left:16px;background:var(--color-bg);padding:6px 10px;font-size:11px;letter-spacing:.12em;color:var(--color-accent-800)">{{ w.event }}</div>
+          </div>
+          <div style="padding:32px;display:flex;flex-direction:column;gap:20px;border-left:1px solid var(--color-divider)">
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="font-size:12px;letter-spacing:.08em;color:var(--color-neutral-700)">{{ w.period }} · {{ w.kind }}</div>
+              <h3 style="font-size:44px;line-height:1.02;text-wrap:pretty">{{ w.title }}</h3>
+              <div style="font-size:18px;font-weight:500">{{ w.tagline }}</div>
+              <sc-if value="{{ w.hasAfter }}" hint-placeholder-val="{{ false }}"><div style="font-size:13px;color:var(--color-accent-800)">{{ w.afterNote }}</div></sc-if>
+            </div>
+            <p style="margin:0;font-size:14px;line-height:1.85;color:var(--color-neutral-800);text-wrap:pretty">{{ w.summary }}</p>
+            <sc-if value="{{ w.hasAreas }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:11px;letter-spacing:.1em;color:var(--color-neutral-600)"><span>ステージ構成と担当範囲</span><span style="color:var(--color-accent-800)">枠内：微調整・統合を担当</span></div>
+                <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;padding:4px;border:2px solid var(--color-accent)">
+                  <sc-for list="{{ w.areaCells }}" as="a" hint-placeholder-count="4">
+                    <div style="min-height:92px;background:{{ a.bg }};color:{{ a.fg }};border:1px solid var(--color-accent-300);display:flex;flex-direction:column;justify-content:space-between;padding:10px;gap:6px">
+                      <div style="font-family:'Barlow Condensed','Zen Kaku Gothic New',sans-serif;font-size:24px;font-weight:600;line-height:1">{{ a.name }}</div>
+                      <div style="font-size:11px;line-height:1.45">{{ a.note }}</div>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-if>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:auto">
+              <sc-for list="{{ w.links }}" as="l" hint-placeholder-count="1">
+                <a href="{{ l.url }}" target="_blank" rel="noopener" class="btn btn-secondary" style="text-decoration:none">{{ l.label }} ↗</a>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+        <div style="border-top:1px solid var(--color-divider);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr))">
+          <sc-for list="{{ w.phaseCols }}" as="p" hint-placeholder-count="5">
+            <div style="padding:18px 18px 22px;display:flex;flex-direction:column;gap:10px;border-left:1px solid var(--color-divider);background:{{ p.colBg }}">
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="width:12px;height:12px;background:{{ p.bg }};border:1px solid {{ p.border }}"></div>
+                <div style="font-size:12px;letter-spacing:.08em;white-space:nowrap;font-weight:{{ p.weight }};color:{{ p.fg }}">{{ p.no }} {{ p.name }}</div>
+              </div>
+              <sc-for list="{{ p.tasks }}" as="t" hint-placeholder-count="1">
+                <div style="font-size:13px;line-height:1.6">{{ t }}</div>
+              </sc-for>
+            </div>
+          </sc-for>
+        </div>
+        <div style="padding:14px 18px;border-top:1px solid var(--color-divider);display:flex;gap:6px;flex-wrap:wrap">
+          <sc-for list="{{ w.tech }}" as="t" hint-placeholder-count="3"><span class="tag tag-neutral">{{ t }}</span></sc-for>
+        </div>
+      </article>
+    </sc-for>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,480px),1fr));gap:32px">
+      <sc-for list="{{ others }}" as="w" hint-placeholder-count="3">
+        <article class="blueprint" style="display:flex;flex-direction:column">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="position:relative;aspect-ratio:16/10;background:var(--color-neutral-200);border-bottom:1px solid var(--color-divider)">
+            <sc-if value="{{ w.hasImage }}" hint-placeholder-val="{{ false }}">
+              <div role="img" aria-label="{{ w.title }}" style="position:absolute;inset:0;background-image:{{ w.bgImage }};background-size:cover;background-position:center"></div>
+            </sc-if>
+            <sc-if value="{{ w.noImage }}" hint-placeholder-val="{{ true }}">
+              <image-slot id="{{ w.slotId }}" shape="rect" placeholder="作品画像をドロップ"></image-slot>
+            </sc-if>
+            <div style="position:absolute;top:12px;left:12px;background:var(--color-bg);padding:5px 9px;font-size:11px;letter-spacing:.1em;color:var(--color-accent-800)">{{ w.event }}</div>
+          </div>
+          <div style="padding:22px;display:flex;flex-direction:column;gap:16px;flex:1">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div style="font-size:12px;letter-spacing:.06em;color:var(--color-neutral-700)">{{ w.period }} · {{ w.kind }}</div>
+              <h3 style="font-size:32px;line-height:1.05">{{ w.title }}</h3>
+              <div style="font-size:15px;font-weight:500">{{ w.tagline }}</div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:3px">
+              <sc-for list="{{ w.phaseCols }}" as="p" hint-placeholder-count="5">
+                <div style="display:flex;flex-direction:column;gap:5px">
+                  <div style="height:8px;background:{{ p.bg }};border:1px solid {{ p.border }}"></div>
+                  <div style="font-size:11px;white-space:nowrap;color:{{ p.fg }};font-weight:{{ p.weight }}">{{ p.name }}</div>
+                </div>
+              </sc-for>
+            </div>
+            <div style="display:flex;flex-direction:column">
+              <sc-for list="{{ w.taskRows }}" as="r" hint-placeholder-count="2">
+                <div style="display:grid;grid-template-columns:64px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--color-divider);font-size:13px;line-height:1.6">
+                  <div style="color:var(--color-accent-800);font-weight:500">{{ r.phase }}</div><div>{{ r.task }}</div>
+                </div>
+              </sc-for>
+            </div>
+            <p style="margin:0;font-size:13px;line-height:1.85;color:var(--color-neutral-700);text-wrap:pretty">{{ w.summary }}</p>
+            <div style="display:flex;gap:6px;flex-wrap:wrap">
+              <sc-for list="{{ w.tech }}" as="t" hint-placeholder-count="2"><span class="tag tag-neutral">{{ t }}</span></sc-for>
+            </div>
+            <sc-if value="{{ w.hasLinks }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:auto">
+                <sc-for list="{{ w.links }}" as="l" hint-placeholder-count="1">
+                  <a href="{{ l.url }}" target="_blank" rel="noopener" class="btn btn-secondary" style="text-decoration:none">{{ l.label }} ↗</a>
+                </sc-for>
+              </div>
+            </sc-if>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="profile" style="border-top:1px solid var(--color-divider)">
+  <div style="max-width:1200px;margin:0 auto;padding:72px 24px 88px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:40px">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <h2 style="font-size:48px">プロフィール</h2>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.9;color:var(--color-neutral-800)">
+        <p style="margin:0">森本藍衣と申します。<br>ゲーム業界に飛び込むため、日々邁進しております。</p>
+        <p style="margin:0">よく慎重派と称されます。疑り深いことが玉に瑕。</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
+        <div style="font-family:'Barlow Condensed','Zen Kaku Gothic New',sans-serif;font-size:22px;font-weight:600;color:var(--color-text)">スキル</div>
+        <div style="display:flex;flex-direction:column"><div style="display:grid;grid-template-columns:minmax(0,92px) 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--color-divider)"><span style="font-size:12px;color:var(--color-accent-800);font-weight:600;padding-top:2px">言語</span><div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-accent" style="white-space:nowrap">C#</span><span class="tag tag-accent" style="white-space:nowrap">C</span><span class="tag tag-accent" style="white-space:nowrap">Java</span><span class="tag tag-accent" style="white-space:nowrap">Ruby</span><span class="tag tag-accent" style="white-space:nowrap">HTML</span><span class="tag tag-accent" style="white-space:nowrap">JavaScript</span><span class="tag tag-outline" style="white-space:nowrap">C++ 学習中</span></div></div><div style="display:grid;grid-template-columns:minmax(0,92px) 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--color-divider)"><span style="font-size:12px;color:var(--color-accent-800);font-weight:600;padding-top:2px">開発環境</span><div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-accent" style="white-space:nowrap">Unity</span><span class="tag tag-accent" style="white-space:nowrap">Meta Quest</span><span class="tag tag-accent" style="white-space:nowrap">Vive Tracker</span></div></div><div style="display:grid;grid-template-columns:minmax(0,92px) 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--color-divider)"><span style="font-size:12px;color:var(--color-accent-800);font-weight:600;padding-top:2px">電子工作</span><div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-accent" style="white-space:nowrap">Arduino</span><span class="tag tag-accent" style="white-space:nowrap">シリアル通信</span><span class="tag tag-accent" style="white-space:nowrap">振動子制御回路</span><span class="tag tag-accent" style="white-space:nowrap">回路設計</span></div></div><div style="display:grid;grid-template-columns:minmax(0,92px) 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--color-divider)"><span style="font-size:12px;color:var(--color-accent-800);font-weight:600;padding-top:2px">通信</span><div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-accent" style="white-space:nowrap">IP・ポート指定の通信処理</span><span class="tag tag-accent" style="white-space:nowrap">ターン制の通信設計</span></div></div><div style="display:grid;grid-template-columns:minmax(0,92px) 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--color-divider)"><span style="font-size:12px;color:var(--color-accent-800);font-weight:600;padding-top:2px">企画</span><div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-accent" style="white-space:nowrap">企画立案</span><span class="tag tag-accent" style="white-space:nowrap">問題提起・対策の考案</span><span class="tag tag-accent" style="white-space:nowrap">課題整理</span><span class="tag tag-accent" style="white-space:nowrap">レベルデザイン</span></div></div><div style="display:grid;grid-template-columns:minmax(0,92px) 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--color-divider)"><span style="font-size:12px;color:var(--color-accent-800);font-weight:600;padding-top:2px">制作進行</span><div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-accent" style="white-space:nowrap">タスク分割</span><span class="tag tag-accent" style="white-space:nowrap">進捗確認</span><span class="tag tag-accent" style="white-space:nowrap">予稿の執筆・添削</span><span class="tag tag-accent" style="white-space:nowrap">展示設営</span></div></div></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div style="font-family:'Barlow Condensed','Zen Kaku Gothic New',sans-serif;font-size:22px;font-weight:600;color:var(--color-text);margin-bottom:10px">学歴</div>
+      <div style="display:grid;grid-template-columns:76px 1fr;gap:14px;padding:14px 0;border-top:1px solid var(--color-divider);font-size:14px;line-height:1.6">
+        <div style="color:var(--color-neutral-700)">2023.04 –</div>
+        <div><div style="font-weight:500">電気通信大学</div><div style="font-size:13px;color:var(--color-neutral-700)">情報理工学域 I類（情報系）メディア情報学プログラム 広田研究室</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:76px 1fr;gap:14px;padding:14px 0;border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);font-size:14px">
+        <div style="color:var(--color-neutral-700)">2023.03</div><div style="font-weight:500">大妻中野高等学校 卒業</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div style="font-family:'Barlow Condensed','Zen Kaku Gothic New',sans-serif;font-size:22px;font-weight:600;color:var(--color-text);margin-bottom:10px">趣味・好きな作品</div>
+      <div style="font-size:14px;margin-bottom:10px">毎クールアニメを追っています。</div>
+      <div style="display:grid;grid-template-columns:76px 1fr;gap:14px;padding:14px 0;border-top:1px solid var(--color-divider);font-size:14px;line-height:1.6">
+        <div style="color:var(--color-neutral-700)">ジャンル</div><div>RPG, アドベンチャー, 重厚なストーリーを持つもの</div>
+      </div>
+      <div style="display:grid;grid-template-columns:76px 1fr;gap:14px;padding:14px 0;border-top:1px solid var(--color-divider);font-size:14px;line-height:1.6">
+        <div style="color:var(--color-neutral-700)">ゲーム</div><div>Tales of Symphonia, 二ノ国, ダンガンロンパ, Fate/GrandOrder</div>
+      </div>
+      <div style="display:grid;grid-template-columns:76px 1fr;gap:14px;padding:14px 0;border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);font-size:14px;line-height:1.6">
+        <div style="color:var(--color-neutral-700)">アニメ</div><div>銀魂、僕のヒーローアカデミア、イナズマイレブンシリーズ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--color-accent-900);color:var(--color-bg)">
+  <div style="max-width:1200px;margin:0 auto;padding:80px 24px 64px;display:flex;flex-direction:column;align-items:flex-start;gap:28px">
+    <h2 style="font-size:clamp(40px,6vw,72px);line-height:1.05;white-space:nowrap">お問い合わせ</h2>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+      <div style="font-size:20px;letter-spacing:.02em;user-select:all">{{ mailShown }}</div>
+      <button onClick="{{ copyMail }}" class="btn" style="color:var(--color-bg);border-color:var(--color-accent-600);text-decoration:none;padding:12px 20px;font-size:16px">{{ copyLabel }}</button>
+      <a href="https://github.com/peachamomomo" target="_blank" rel="noopener" class="btn" style="color:var(--color-bg);border-color:var(--color-accent-600);text-decoration:none;padding:12px 20px;font-size:16px">GitHub ↗</a>
+      <button onClick="{{ openCv }}" class="btn" style="background:var(--color-bg);color:var(--color-accent-900);border-color:var(--color-bg);padding:12px 20px;font-size:16px">履歴書を見る</button>
+    </div>
+    <sc-if value="{{ cvOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="width:100%;display:flex;flex-direction:column;gap:12px;padding:20px;border:1px solid var(--color-accent-600);max-width:520px;box-sizing:border-box">
+        <sc-if value="{{ cvLocked }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="font-size:15px">確認のため、次の計算の答えを入力してください。</div>
+            <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:600;white-space:nowrap">{{ quiz }} =</div>
+              <input value="{{ answer }}" onChange="{{ onAnswer }}" onKeyDown="{{ onKey }}" inputmode="numeric" class="input" style="width:96px;color:var(--color-text);background:var(--color-bg)">
+              <button onClick="{{ checkAnswer }}" class="btn" style="background:var(--color-bg);color:var(--color-accent-900);border-color:var(--color-bg)">確認する</button>
+            </div>
+            <sc-if value="{{ wrong }}" hint-placeholder-val="{{ false }}"><div style="font-size:13px;color:var(--color-accent-200)">答えが違います。もう一度お試しください。</div></sc-if>
+          </div>
+        </sc-if>
+        <sc-if value="{{ cvUnlocked }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="font-size:15px">ご確認ありがとうございます。</div>
+            <sc-if value="{{ hasCv }}" hint-placeholder-val="{{ false }}">
+              <a href="{{ cvHref }}" target="_blank" rel="noopener noreferrer" class="btn" style="align-self:flex-start;background:var(--color-bg);color:var(--color-accent-900);border-color:var(--color-bg);text-decoration:none;padding:10px 18px">履歴書を開く（Google Drive）↗</a>
+            </sc-if>
+            <sc-if value="{{ noCv }}" hint-placeholder-val="{{ false }}"><div style="font-size:13px;color:var(--color-accent-200)">履歴書のリンクは準備中です。</div></sc-if>
+          </div>
+        </sc-if>
+      </div>
+    </sc-if>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:24px;border-top:1px solid var(--color-accent-800);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--color-accent-300)">
+    <span>© 2026 森本 藍衣</span>
+    <a href="#top" style="color:var(--color-accent-300)">ページの先頭へ ↑</a>
+  </div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+// ===== 作品の追加・編集はここ =====
+// 並び順 = この配列の順（先頭2件が大きく表示されます）
+// tasks: 工程ごとの担当内容。plan=企画 / design=設計 / impl=実装（統合を含む） / show=展示・発表
+// image: 画像URL。空欄なら画面上に画像をドラッグ＆ドロップできます
+const WORKS = [
+  { id: 'mitama', start: '2026-10-18', end: '', period: '2026.10 –', kind: 'チーム制作', event: 'alt.ctrl.GDC 2027 · 応募・審査待ち',
+    title: 'Mitama: The Mouth of God', tagline: '食感だけを手がかりに遊ぶ VR ゲーム', after: 'MealBeBack',
+    summary: 'フォーク型の触覚コントローラを口に入れ、空気制御で生まれる食感から食べ物や生き物を生み出す。プレイヤーは村の神となり、首を振ってそれを村人に届ける。120秒のタイムアタック形式。',
+    tasks: { plan: ['締め切りまで1か月のタイトなスケジュールの中、企画の問題提起と対策の考案をメインに担当しました。', 'チームメンバーとの議論の中で、批判的思考力を駆使し、アイデアの検討や、実現に向けた課題の整理を行いました。'], design: ['別の開発者が構築したシステムをもとに、ゲーム内への統合を行いました。', 'step 遷移ごとのエリア状態を決定しました。'], impl: ['Unity エンジニアとしてバグ修正を担当しました。', '山エリアのデザインとオブジェクト配置を行いました。', '開発者ごとに作成したフィールド間に生じた不調和を、統合の段階で調整・改善しました。', 'ゲーム全体のレベルデザインを調整しました。'] },
+    areas: [{ name: '山', note: 'デザイン・オブジェクト配置', own: true }, { name: '海', note: '微調整・統合', own: false }, { name: '村', note: '微調整・統合', own: false }, { name: '草原', note: '微調整・統合', own: false }],
+    team: 5, teamLabel: 'MikoMiko★EatFever · 5名チーム',
+    tech: ['Unity', 'C#', 'Arduino', 'シリアル通信'],
+    image: 'https://gdc.mikomiko-night.workers.dev/assets/world/village.jpg',
+    links: [{ label: 'プロジェクトサイト', url: 'https://gdc.mikomiko-night.workers.dev' }, { label: '制作の様子', url: 'https://gdc.mikomiko-night.workers.dev/making.html' }] },
+  { id: 'madeinuec', start: '2026-02-13', end: '2026-02-28', period: '2026.02.13 – 02.28', kind: 'サークル', event: '大学サークル',
+    title: 'Made in UEC', tagline: '数秒勝負のミニゲームが次々に続く',
+    summary: 'ごくわずかな制限時間でプレイするミニゲームが集合した、ハイスピードアクションゲーム。',
+    tasks: { plan: ['大学のサークル・コミュニティで企画されたプロジェクトに参加し、その構成要素の一つであるミニゲーム「ウィンドウ」を企画しました。', 'グループを結成しました。'], impl: ['仕事の分割、問題の明文化、進捗の確認、運営との相談を行い、プロトタイプを作成しました。'] },
+    tech: ['Unity', 'C#'], image: '', links: [] },
+  { id: 'mealbeback', start: '2026-06-06', end: '2026-09-07', period: '2026.06.06 – 09.07', kind: 'コンテスト', event: 'IVRC 2026 · 審査通過・会場展示',
+    title: 'MealBeBack', tagline: '咀嚼を、逆再生する食育体験',
+    summary: '『日本書紀』の保食神(うけもちのかみ)は，口から飯や魚，獣を生み出して人をもてなしたと語られる．本企画では「口から食が生まれる」情景と，咀嚼の逆再生表現を重ね合わせ、食の背後にある生命に身体を通して触れる新たな食育体験を構築する．咀嚼に応じて口内の食べ物が物理的に復元・増加し，その原材料へと巻き戻り，体験者の口から生み出される. クイズ形式の体験として実装することで楽しめる食育コンテンツを目指す.',
+    tasks: { plan: ['体験者の口内に食べ物を送り出す体験のため、安全設計を前提として、企画段階から念入りに問題提起を行いました。'], design: ['デバイスとの通信処理、デバイス選択処理を中心にシステムを設計しました。', 'ハードウェア設計のフォローを行いました。'], impl: ['シリアル通信の基盤を作成しました。', '他のメンバーが作成したコードをもとにデバッグを行い、バグを修正しました。'], show: ['予稿の添削を行いました。', '会場での展示設営を行いました。'] },
+    tech: ['Unity', 'C#', 'Arduino', 'シリアル通信'],
+    image: 'https://img.youtube.com/vi/YFNzpdmrfdw/maxresdefault.jpg',
+    links: [{ label: 'YouTube', url: 'https://www.youtube.com/watch?v=YFNzpdmrfdw' }] },
+  { id: 'mediamonster', start: '2024-12-01', end: '2025-02-19', period: '2024.12 – 2025.02', kind: '授業', event: '授業課題',
+    title: 'MediaMonster', tagline: 'IP とポートを指定して対戦する、通信コマンドバトル',
+    summary: 'IPアドレスとポート番号指定による通信コマンドバトルゲーム',
+    tasks: { plan: ['「ターン制でドット絵にしたい」というアイデアをもとに、通信方式の設定や Java で実装するうえでの課題をブラッシュアップし、具体的な実装段階まで落とし込みました。'], design: ['ターン制の通信処理について、ターンの遷移や処理の流れを詰めました。'], impl: ['通信処理を実装しました。', 'その他の動作確認を行いました。'] },
+    tech: ['Java'], image: '', links: [] },
+];
+
+// 連絡先・履歴書（ページの HTML に平文で出さないため分割して保持）
+const MAIL = ['morimotoai2004', 'gmail.com'];
+// 履歴書の Google Drive 共有リンクをここに貼ってください（例: 'https://drive.google.com/file/d/xxxx/view'）
+const CV_URL = '';
+const PHASES = [['plan', '企画'], ['design', '設計'], ['impl', '実装'], ['show', '展示']];
+const TODAY = '2026-10-30';
+
+class Component extends DCLogic {
+  state = { copied: false, cvOpen: false, cvUnlocked: false, answer: '', wrong: false, qa: 3 + Math.floor(Math.random() * 7), qb: 2 + Math.floor(Math.random() * 8) };
+
+  check() {
+    const ok = Number(String(this.state.answer).trim()) === this.state.qa + this.state.qb;
+    this.setState(ok ? { cvUnlocked: true, wrong: false } : { wrong: true, answer: '', qa: 3 + Math.floor(Math.random() * 7), qb: 2 + Math.floor(Math.random() * 8) });
+  }
+  renderVals() {
+    const A = 'var(--color-accent)', A1 = 'var(--color-accent-100)', D = 'var(--color-divider)', N = 'var(--color-neutral-500)';
+    const phaseCols = w => PHASES.map(([k, name], i) => {
+      const t = w.tasks[k] || [], on = t.length > 0;
+      return { no: String(i + 1).padStart(2, '0'), name, tasks: t, bg: on ? A : 'transparent', border: on ? A : D,
+        fg: on ? 'var(--color-accent-800)' : N, weight: on ? 600 : 400, colBg: on ? 'transparent' : 'var(--color-neutral-100)' };
+    });
+    const base = w => ({ ...w, slotId: 'work-' + w.id, phaseCols: phaseCols(w),
+      hasImage: !!w.image, noImage: !w.image, bgImage: w.image ? `url("${w.image}")` : 'none', hasLinks: w.links.length > 0,
+      taskRows: PHASES.flatMap(([k, name]) => (w.tasks[k] || []).map(task => ({ phase: name, task }))) });
+
+    const featured = WORKS.slice(0, 2).map(w => ({ ...base(w), hasAreas: !!w.areas,
+      areaCells: (w.areas || []).map(a => ({ ...a, bg: a.own ? A : 'transparent', fg: a.own ? 'var(--color-bg)' : 'var(--color-accent-800)' })),
+      teamDots: Array.from({ length: w.team || 0 }, (_, i) => i === 0 ? A : 'transparent') }));
+    const others = WORKS.slice(2).map(base);
+    featured.forEach(f => { f.hasAfter = !!f.after; f.afterNote = f.after ? `IVRC2026「${f.after}」の後に制作` : ''; });
+
+    const covered = PHASES.filter(([k]) => WORKS.some(w => w.tasks[k]?.length)).length;
+    const pips = (n, total) => Array.from({ length: total }, (_, i) => i < n ? A : 'var(--color-neutral-200)');
+    const exhibits = WORKS.filter(w => w.kind === 'コンテスト' || w.kind === 'チーム制作').length;
+    const stats = [
+      { value: WORKS.length, unit: '作品', label: '授業・サークル・コンテスト・国際出展', pips: pips(WORKS.length, WORKS.length) },
+      { value: covered, unit: `/ ${PHASES.length} 工程`, label: '企画・設計・実装・統合・展示のすべてを経験', pips: pips(covered, PHASES.length) },
+      { value: exhibits, unit: '出展', label: 'IVRC 2026 / alt.ctrl.GDC 2027', pips: pips(exhibits, exhibits) },
+      { value: '4', unit: 'エリア統合', label: 'Mitama の全ステージを一つのゲームに統合', pips: pips(4, 4) },
+    ];
+
+    const chrono = [...WORKS].sort((a, b) => a.start.localeCompare(b.start));
+    const mapRows = chrono.map(w => ({ title: w.title, event: w.event, cells: PHASES.map(([k]) => {
+      const n = (w.tasks[k] || []).length;
+      return { label: n ? '●' : '', bg: n ? A1 : 'transparent', border: n ? A : D, fg: 'var(--color-accent-700)' };
+    }) }));
+    const phaseTotals = PHASES.map(([k]) => WORKS.filter(w => w.tasks[k]?.length).length);
+
+    const ms = d => new Date(d).getTime();
+    const t0 = ms('2024-10-01'), t1 = ms('2027-01-01'), pct = t => ((t - t0) / (t1 - t0) * 100).toFixed(2) + '%';
+    const ticks = ['2025-01-01', '2026-01-01'].map(d => ({ left: pct(ms(d)), label: d.slice(0, 4) }));
+    const timeline = chrono.map(w => {
+      const s = ms(w.start), e = ms(w.end || TODAY), L = (s - t0) / (t1 - t0) * 100;
+      return { title: w.title, period: w.period, left: L.toFixed(2) + '%', width: Math.max(2.5, (e - s) / (t1 - t0) * 100).toFixed(2) + '%',
+        bg: w.end ? A1 : A, endStyle: w.end ? 'solid' : 'dashed',
+        hasNote: !!w.after, note: w.after ? `${w.after} の後に制作 →` : '', noteRight: (100 - L + 1).toFixed(2) + '%' };
+    });
+
+    const techs = [...new Set(chrono.flatMap(w => w.tech))];
+    const matrix = techs.map(t => ({ name: t, cells: chrono.map(w => w.tech.includes(t) ? A : 'transparent') }));
+
+    return {
+      stats, featured, others, mapRows, phaseTotals, phaseHeads: PHASES.map(p => p[1]),
+      ticks, timeline, matrix, matrixCols: chrono.map(w => w.title),
+      mailShown: MAIL.join(' <at> '),
+      copyLabel: this.state.copied ? 'コピーしました' : 'アドレスをコピー',
+      copyMail: () => { navigator.clipboard?.writeText(MAIL.join(String.fromCharCode(64))); this.setState({ copied: true }); setTimeout(() => this.setState({ copied: false }), 1800); },
+      openCv: () => this.setState(s => ({ cvOpen: !s.cvOpen })),
+      cvOpen: this.state.cvOpen, cvLocked: !this.state.cvUnlocked, cvUnlocked: this.state.cvUnlocked,
+      quiz: `${this.state.qa} + ${this.state.qb}`, answer: this.state.answer, wrong: this.state.wrong,
+      onAnswer: e => this.setState({ answer: e.target.value, wrong: false }),
+      onKey: e => { if (e.key === 'Enter') this.check(); },
+      checkAnswer: () => this.check(),
+      hasCv: this.state.cvUnlocked && !!CV_URL, noCv: this.state.cvUnlocked && !CV_URL,
+      cvHref: this.state.cvUnlocked && CV_URL ? CV_URL : undefined,
+    };
+  }
+}
+</script>
+</body>
+</html>

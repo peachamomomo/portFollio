@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="./industry.css">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Barlow","Zen Kaku Gothic New",sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:"Barlow Condensed","Zen Kaku Gothic New",sans-serif}
+a{color:var(--color-accent-700)}
+a:hover{color:var(--color-accent-900)}
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:var(--color-bg);color:var(--color-text)">
+
+<header style="position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--color-bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--color-divider)">
+  <nav class="nav" style="max-width:1160px;margin:0 auto;padding:14px 24px;flex-wrap:wrap">
+    <a href="#top" class="nav-brand" style="font-size:20px">森本 藍衣 <span style="font-size:13px;color:var(--color-neutral-600);margin-left:6px;letter-spacing:.1em">PORTFOLIO</span></a>
+    <a href="#strengths">強み</a>
+    <a href="#works">作品</a>
+    <a href="#profile">プロフィール</a>
+    <a href="#contact">連絡先</a>
+  </nav>
+</header>
+
+<section id="top" style="max-width:1160px;margin:0 auto;padding:88px 24px 64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:48px;align-items:end">
+  <div style="display:flex;flex-direction:column;gap:24px">
+    <div style="font-size:13px;letter-spacing:.14em;color:var(--color-accent-700)">VIRTUAL REALITY / GAME DEVELOPMENT</div>
+    <h1 style="margin:0;font-size:clamp(44px,6.6vw,84px);line-height:1.12;letter-spacing:-.01em;text-wrap:pretty">企画して、設計して、<br>動かして、つなぐ。</h1>
+    <p style="margin:0;font-size:17px;line-height:1.9;max-width:560px;color:var(--color-neutral-800);text-wrap:pretty">VR を専攻し、IVRC2026 と alt.ctrl.GDC 2027 への出展に参加。システムエンジニア、プランナー、プログラマー、チームのつなぎ役として制作に関わっています。</p>
+  </div>
+  <div class="blueprint" style="padding:24px;display:flex;flex-direction:column;gap:10px;font-size:14px;line-height:1.7">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div style="font-size:11px;letter-spacing:.12em;color:var(--color-neutral-600)">AFFILIATION</div>
+    <div style="font-family:'Barlow Condensed','Zen Kaku Gothic New',sans-serif;font-size:24px;font-weight:600">森本 藍衣</div>
+    <div>電気通信大学 情報理工学域 I類（情報系）</div>
+    <div>メディア情報学プログラム 広田研究室</div>
+  </div>
+</section>
+
+<section id="strengths" style="border-top:1px solid var(--color-divider)">
+  <div style="max-width:1160px;margin:0 auto;padding:72px 24px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:36px">
+      <h2 style="margin:0;font-size:36px">4つの強み</h2>
+      <div style="font-size:13px;color:var(--color-neutral-600)">選ぶと、その強みを発揮した作品に絞り込みます</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px">
+      <sc-for list="{{ strengths }}" as="s" hint-placeholder-count="4">
+        <button onClick="{{ s.onClick }}" class="blueprint" style="all:unset;position:relative;box-sizing:border-box;border:1px solid {{ s.border }};background:{{ s.bg }};cursor:pointer;padding:24px;display:flex;flex-direction:column;gap:14px;min-height:240px;transition:background .2s">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:.1em;color:var(--color-accent-700)">
+            <span>{{ s.code }}</span><span>{{ s.count }} WORKS</span>
+          </div>
+          <div style="font-family:'Barlow Condensed','Zen Kaku Gothic New',sans-serif;font-size:26px;font-weight:600">{{ s.name }}</div>
+          <div style="font-size:14px;line-height:1.85;color:var(--color-neutral-800);text-wrap:pretty">{{ s.desc }}</div>
+        </button>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="works" style="border-top:1px solid var(--color-divider)">
+  <div style="max-width:1160px;margin:0 auto;padding:72px 24px 88px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:28px">
+      <h2 style="margin:0;font-size:36px">作品</h2>
+      <div style="font-size:13px;color:var(--color-neutral-600)">{{ orderLabel }} ・ {{ shownCount }} 件</div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:44px;padding-bottom:28px;border-bottom:1px solid var(--color-divider)">
+      <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+        <div style="width:72px;font-size:12px;letter-spacing:.1em;color:var(--color-neutral-600)">種別</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <sc-for list="{{ kindFilters }}" as="f" hint-placeholder-count="4">
+            <button onClick="{{ f.onClick }}" class="{{ f.cls }}">{{ f.label }}</button>
+          </sc-for>
+        </div>
+      </div>
+      <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+        <div style="width:72px;font-size:12px;letter-spacing:.1em;color:var(--color-neutral-600)">使用技術</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <sc-for list="{{ techFilters }}" as="f" hint-placeholder-count="5">
+            <button onClick="{{ f.onClick }}" class="{{ f.cls }}">{{ f.label }}</button>
+          </sc-for>
+        </div>
+      </div>
+      <sc-if value="{{ hasStrength }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+          <div style="width:72px;font-size:12px;letter-spacing:.1em;color:var(--color-neutral-600)">強み</div>
+          <button onClick="{{ clearStrength }}" class="btn btn-primary">{{ strengthName }} ×</button>
+        </div>
+      </sc-if>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,440px),1fr));gap:40px 32px">
+      <sc-for list="{{ works }}" as="w" hint-placeholder-count="4">
+        <article class="blueprint" style="display:flex;flex-direction:column">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <sc-if value="{{ w.showImg }}" hint-placeholder-val="{{ true }}">
+            <div class="duotone" style="aspect-ratio:16/9;border-bottom:1px solid var(--color-divider);background:repeating-linear-gradient(135deg,var(--color-neutral-200) 0 8px,var(--color-bg) 8px 16px);display:flex;align-items:center;justify-content:center">
+              <sc-if value="{{ w.hasImage }}" hint-placeholder-val="{{ false }}">
+                <div role="img" aria-label="{{ w.title }}" style="position:absolute;inset:0;background-image:{{ w.bgImage }};background-size:cover;background-position:center"></div>
+              </sc-if>
+              <sc-if value="{{ w.noImage }}" hint-placeholder-val="{{ true }}">
+                <span style="font-family:ui-monospace,monospace;font-size:12px;color:var(--color-neutral-700)">作品画像 / スクリーンショット</span>
+              </sc-if>
+            </div>
+          </sc-if>
+          <div style="padding:24px;display:flex;flex-direction:column;gap:14px;flex:1">
+            <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;letter-spacing:.08em">
+              <span style="color:var(--color-accent-700)">{{ w.no }} ・ {{ w.kind }} ・ {{ w.event }}</span>
+              <span style="color:var(--color-neutral-700)">{{ w.period }}</span>
+            </div>
+            <h3 style="margin:0;font-size:30px;line-height:1.2;text-wrap:pretty">{{ w.title }}</h3>
+            <sc-if value="{{ w.hasNote }}" hint-placeholder-val="{{ false }}">
+              <div style="font-size:13px;color:var(--color-accent-700)">{{ w.note }}</div>
+            </sc-if>
+            <p style="margin:0;font-size:14px;line-height:1.9;color:var(--color-neutral-800);text-wrap:pretty">{{ w.summary }}</p>
+            <div style="display:flex;flex-direction:column;gap:6px;padding-top:14px;border-top:1px solid var(--color-divider)">
+              <div style="font-size:11px;letter-spacing:.12em;color:var(--color-neutral-600)">担当</div>
+              <ul style="margin:0;padding-left:18px;font-size:14px;line-height:1.8">
+                <sc-for list="{{ w.role }}" as="r" hint-placeholder-count="2"><li>{{ r }}</li></sc-for>
+              </ul>
+            </div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:6px">
+              <sc-for list="{{ w.strengthTags }}" as="t" hint-placeholder-count="2">
+                <span class="{{ t.cls }}">{{ t.name }}</span>
+              </sc-for>
+              <sc-for list="{{ w.tech }}" as="t" hint-placeholder-count="2">
+                <span class="tag tag-neutral">{{ t }}</span>
+              </sc-for>
+            </div>
+            <sc-if value="{{ w.hasLink }}" hint-placeholder-val="{{ false }}">
+              <a href="{{ w.link }}" target="_blank" rel="noopener" class="btn btn-secondary" style="align-self:flex-start;text-decoration:none">{{ w.linkLabel }} →</a>
+            </sc-if>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+    <sc-if value="{{ isEmpty }}" hint-placeholder-val="{{ false }}">
+      <div style="padding:48px 0;font-size:14px;color:var(--color-neutral-700)">条件に合う作品はありません。</div>
+    </sc-if>
+  </div>
+</section>
+
+<section id="profile" style="border-top:1px solid var(--color-divider)">
+  <div style="max-width:1160px;margin:0 auto;padding:72px 24px 88px;display:flex;flex-direction:column;gap:40px">
+    <h2 style="margin:0;font-size:36px">プロフィール</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:32px">
+      <div style="display:flex;flex-direction:column;gap:14px;font-size:15px;line-height:1.95;text-wrap:pretty">
+        <div style="font-size:11px;letter-spacing:.12em;color:var(--color-neutral-600)">自己紹介</div>
+        <p style="margin:0">森本藍衣と申します。<br>ゲーム業界に飛び込むため、日々邁進しております。</p>
+        <p style="margin:0">よく慎重派と称されます。疑り深いことが玉に瑕。</p>
+        <p style="margin:0">Unityメインで、C言語やC#, Ruby, Java, html/JavaScriptを扱えます。<br>C++鋭意勉強中......</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:28px">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="font-size:11px;letter-spacing:.12em;color:var(--color-neutral-600)">スキル</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <span class="tag tag-accent" style="font-size:13px;padding:5px 12px">Unity</span>
+            <span class="tag tag-accent" style="font-size:13px;padding:5px 12px">C#</span>
+            <span class="tag tag-accent" style="font-size:13px;padding:5px 12px">C</span>
+            <span class="tag tag-accent" style="font-size:13px;padding:5px 12px">Java</span>
+            <span class="tag tag-accent" style="font-size:13px;padding:5px 12px">Ruby</span>
+            <span class="tag tag-accent" style="font-size:13px;padding:5px 12px">HTML / JavaScript</span>
+            <span class="tag tag-accent" style="font-size:13px;padding:5px 12px">Arduino</span>
+            <span class="tag tag-outline" style="font-size:13px;padding:5px 12px;white-space:nowrap">C++（学習中）</span>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="font-size:11px;letter-spacing:.12em;color:var(--color-neutral-600)">学歴</div>
+          <div style="display:grid;grid-template-columns:80px 1fr;gap:8px 16px;font-size:14px;line-height:1.7">
+            <span style="color:var(--color-neutral-700)">2023.03</span><span>大妻中野高等学校 卒業</span>
+            <span style="color:var(--color-neutral-700)">2023.04</span><span>電気通信大学 入学</span>
+            <span style="color:var(--color-neutral-700)">現在</span><span>情報理工学域 I類 メディア情報学プログラム 広田研究室</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.8">
+        <div style="font-size:11px;letter-spacing:.12em;color:var(--color-neutral-600)">趣味・好きな作品</div>
+        <div>毎クールアニメを追っています。</div>
+        <div style="display:grid;grid-template-columns:96px 1fr;gap:10px 16px;margin-top:4px">
+          <span style="color:var(--color-neutral-700)">好きなジャンル</span><span>RPG, アドベンチャー, 重厚なストーリーを持つもの</span>
+          <span style="color:var(--color-neutral-700)">好きなゲーム</span><span>Tales of Symphonia, 二ノ国, ダンガンロンパ, Fate/GrandOrder</span>
+          <span style="color:var(--color-neutral-700)">好きなアニメ</span><span>銀魂、僕のヒーローアカデミア、イナズマイレブンシリーズ</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--color-accent-900);color:var(--color-bg)">
+  <div style="max-width:1160px;margin:0 auto;padding:72px 24px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap">
+    <h2 style="margin:0;font-size:36px">連絡先</h2>
+    <a href="mailto:morimotoai2004@gmail.com" style="color:var(--color-bg);font-size:20px;text-decoration:underline;text-underline-offset:4px">morimotoai2004@gmail.com</a>
+  </div>
+  <div style="max-width:1160px;margin:0 auto;padding:0 24px 32px;font-size:12px;color:var(--color-accent-300)">© 2026 Ai Morimoto</div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;order&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;oldest&quot;,&quot;newest&quot;],&quot;default&quot;:&quot;oldest&quot;,&quot;tsType&quot;:&quot;'oldest'|'newest'&quot;},&quot;showImages&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+// ===== 作品を追加するときは WORKS に1件追記するだけ（date の順に自動で並びます）=====
+// kind: '授業' | 'サークル' | 'コンテスト'（新しい種別も自動でフィルタに出ます）
+// strengths: 'se' | 'plan' | 'prog' | 'comm'   image: 画像URL（空欄で仮画像）
+const WORKS = [
+  { date: '2024-12-01', period: '2024.12.01 – 2025.02.19', kind: '授業', event: 'CLASS',
+    title: 'MediaMonster',
+    summary: 'IPアドレスとポート番号指定による通信コマンドバトルゲーム',
+    role: ['通信処理の実装'],
+    strengths: ['prog'], tech: ['Java'], image: '', link: '', linkLabel: '' },
+  { date: '2026-02-13', period: '2026.02.13 – 2026.02.28', kind: 'サークル', event: 'CIRCLE',
+    title: 'Made in UEC',
+    summary: 'ごくわずかな制限時間でプレイするミニゲームが集合した、ハイスピードアクションゲーム。',
+    role: ['ミニゲームの一つである「ウィンドウ」を企画、グループを結成して実装まで行った。'],
+    strengths: ['plan', 'prog', 'comm'], tech: ['Unity', 'C#'], image: '', link: '', linkLabel: '' },
+  { date: '2026-06-06', period: '2026.06.06 – 2026.09.07', kind: 'コンテスト', event: 'IVRC2026',
+    title: 'MealBeBack',
+    summary: '『日本書紀』の保食神(うけもちのかみ)は，口から飯や魚，獣を生み出して人をもてなしたと語られる．本企画では「口から食が生まれる」情景と，咀嚼の逆再生表現を重ね合わせ、食の背後にある生命に身体を通して触れる新たな食育体験を構築する．咀嚼に応じて口内の食べ物が物理的に復元・増加し，その原材料へと巻き戻り，体験者の口から生み出される. クイズ形式の体験として実装することで楽しめる食育コンテンツを目指す.',
+    role: ['システム設計（主にデバイスとの通信処理とデバイス選択処理）', 'ハード設計のフォロー', '予稿添削', '会場展示設営', '安全設計が核のプロジェクトだったため、企画段階から問題提起を念入りに'],
+    strengths: ['se', 'plan', 'prog', 'comm'], tech: ['Unity', 'C#', 'Arduino', 'シリアル通信'], image: '', link: '', linkLabel: '' },
+  { date: '2026-10-18', period: '2026.10.18 –', kind: 'コンテスト', event: 'alt.ctrl.GDC 2027',
+    title: 'Mitama: The Mouth of God', note: 'IVRC2026「MealBeBack」の後に制作',
+    summary: 'フォーク型の触覚コントローラを口に入れ、空気制御で生まれる食感だけを手がかりに遊ぶ VR ゲーム。プレイヤーは村の神となり、食感から食べ物や生き物を生み出し、首を振って村人に届ける。',
+    role: ['Unity エンジニア（バグ修正、海エリア）', '山エリアのデザインとオブジェクト配置', 'step 遷移ごとのエリア状態の決定', '全エリアの統合、デザイン調整', 'レベルデザイン調整（全体）'],
+    strengths: ['se', 'plan', 'prog', 'comm'], tech: ['Unity', 'C#', 'Arduino', 'シリアル通信'],
+    image: 'https://gdc.mikomiko-night.workers.dev/assets/world/village.jpg',
+    link: 'https://gdc.mikomiko-night.workers.dev', linkLabel: 'プロジェクトサイト' },
+];
+
+const STRENGTHS = [
+  { id: 'se', code: '01 / SE', name: 'システム設計', desc: 'MealBeBack でデバイスとの通信処理・デバイス選択処理を設計。安全設計を前提に、企画段階から問題を洗い出しました。' },
+  { id: 'plan', code: '02 / PLANNER', name: '企画', desc: 'Made in UEC のミニゲーム「ウィンドウ」を企画。Mitama では step 遷移ごとのエリア状態を決めました。' },
+  { id: 'prog', code: '03 / PROGRAMMING', name: 'プログラミング', desc: 'Unity / C# を中心に、Java による通信処理、Arduino とのシリアル通信まで実装しています。' },
+  { id: 'comm', code: '04 / COMMUNICATION', name: 'コミュニケーション', desc: 'グループを結成して実装まで進行。予稿添削、展示設営、全エリアの統合など、チームをつなぐ役割を担いました。' },
+];
+
+class Component extends DCLogic {
+  state = { kind: 'all', tech: 'all', strength: null };
+
+  renderVals() {
+    const order = this.props.order ?? 'oldest';
+    const showImages = this.props.showImages ?? true;
+    const { kind, tech, strength } = this.state;
+    const sName = id => STRENGTHS.find(s => s.id === id)?.name;
+
+    const chrono = [...WORKS].sort((a, b) => a.date.localeCompare(b.date));
+    const numbered = chrono.map((w, i) => ({ ...w, no: String(i + 1).padStart(2, '0') }));
+    const sorted = order === 'newest' ? numbered.reverse() : numbered;
+    const match = w => (kind === 'all' || w.kind === kind) && (tech === 'all' || w.tech.includes(tech)) && (!strength || w.strengths.includes(strength));
+
+    const works = sorted.filter(match).map(w => ({
+      ...w,
+      hasNote: !!w.note, hasLink: !!w.link, showImg: showImages, hasImage: !!w.image, noImage: !w.image, bgImage: w.image ? `url("${w.image}")` : 'none',
+      strengthTags: w.strengths.map(t => ({ name: sName(t), cls: t === strength ? 'tag tag-outline' : 'tag tag-accent' })),
+    }));
+
+    const mk = (list, cur, key) => [{ v: 'all', label: 'すべて' }, ...list.map(v => ({ v, label: v }))].map(o => ({
+      label: o.label, cls: o.v === cur ? 'btn btn-primary' : 'btn btn-secondary',
+      onClick: () => this.setState({ [key]: o.v }),
+    }));
+    const kinds = [...new Set(chrono.map(w => w.kind))];
+    const techs = [...new Set(chrono.flatMap(w => w.tech))];
+
+    const strengths = STRENGTHS.map(s => {
+      const on = strength === s.id;
+      return { ...s, count: WORKS.filter(w => w.strengths.includes(s.id)).length,
+        bg: on ? 'var(--color-accent-100)' : 'transparent',
+        border: on ? 'var(--color-accent)' : 'var(--color-divider)',
+        onClick: () => {
+          this.setState({ strength: on ? null : s.id });
+          const el = document.getElementById('works');
+          if (!on && el) window.scrollTo({ top: el.offsetTop - 56, behavior: 'smooth' });
+        } };
+    });
+
+    return {
+      works, strengths,
+      kindFilters: mk(kinds, kind, 'kind'),
+      techFilters: mk(techs, tech, 'tech'),
+      hasStrength: !!strength, strengthName: sName(strength),
+      clearStrength: () => this.setState({ strength: null }),
+      shownCount: works.length, isEmpty: works.length === 0,
+      orderLabel: order === 'newest' ? '新しい順' : '古い順（時系列）',
+    };
+  }
+}
+</script>
+</body>
+</html>
